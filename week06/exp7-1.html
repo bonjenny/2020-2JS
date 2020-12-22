@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>난수</title>
+</head>
+<body>
+    <h3>난수 10개 생성</h3>
+    <hr>
+    <script>
+        var n = []; //배열 n 선언
+        for(var i=0; i<10; i++) { //난수 10개 배열에 저장
+            n[i] = Math.random()*100+1;
+            n[i] = Math.floor(n[i]);
+            n[i] = parseInt(n[i]);
+        }
+        for(i=0; i<10; i++) { //배열 출력
+            document.writeln(n[i]);
+        }
+        document.write("<hr>");
+        var big = n[0]; //big은 제일 큰 수 저장
+        for(i=0; i<10; i++) { //큰 수 찾기
+            if (big < n[i]) big = n[i];
+            else if (n[i] == "100") big = 100;
+        }
+        document.write("제일 큰 수는 " + big);
+        document.write("<hr>");
+        for(i=0; i<10; i++) {
+            for(j=0; j<9; j++) {
+                if (n[j+1] < n[j]) {
+                    big = n[j];
+                    n[j] = n[j+1];
+                    n[j+1] = big;
+                }
+            }
+        }
+        for(i=0; i<10; i++)
+            document.writeln(n[i]);
+    </script>
+</body>
+</html>

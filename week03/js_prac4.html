@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>실습문제4</title>
+</head>
+<body>
+    <script>
+        var day = prompt("요일입력>>");
+        switch(day) {
+            case "월":
+            case "화":
+            case "수":
+            case "목":
+            case "금": document.write("정상영업");
+                    break;
+            case "토":
+            case "일": document.write("휴일");
+                    break;
+            default: document.write("다시 입력하세요.");
+                    break;
+        }
+    </script>
+</body>
+</html>

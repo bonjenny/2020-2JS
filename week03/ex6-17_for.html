@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>예제 6-15 if-else 사용</title>
+</head>
+<body>
+    <script>
+        var i, j, k;
+        for (i = 0; i < 10; i += 3)
+            document.write(i + "  ");
+        document.write("<br>");
+        
+        k = prompt("행수입력");
+        k = parseInt(k);
+        for (i = 0; i < k; i++) {
+            for (j = 0; j <= i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

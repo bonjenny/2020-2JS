@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>4주차_7장 과제_실습문제2번</title>
+</head>
+<body>
+    <h3>prompt() 함수를 반복 호출하여 5개의 정수 역순으로 출력</h3>
+    <hr>
+    <script>
+        var i;
+        var A = new Array(5); //5개의 원소를 가진 배열
+        for (i = 0; i < 5; i++) {
+            A[i] = prompt("정수를 입력하세요", 12);
+            A[i] = parseInt(A[i]);
+        }
+        for (i = 4; i >= 0; i--) {
+            document.write(A[i] + " ");
+        }
+    </script>
+</body>
+</html>

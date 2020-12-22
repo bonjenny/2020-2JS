@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>실습문제 2. 라디오버튼으로 선택하면 해당 이미지를 출력하는 웹 페이지</title>
+  <script>
+    function printImg() {
+      var found = null;
+      var kfruits = document.getElementsByName("fruits");
+      var image = document.getElementById("fruitimage");
+      for(var i=0; i<kfruits.length; i++) {
+        if(kfruits[i].checked == true)
+          found = kfruits[i];
+      }
+      image.src = found.value;
+    }
+  </script>
+</head>
+<body onload="printImg()">
+  <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+  <hr>
+  <form>
+    <input type="radio" name="fruits" value="media/banana.png" onclick="printImg()" checked>바나나
+    <input type="radio" name="fruits" value="media/mango.png" onclick="printImg()">망고
+    <input type="radio" name="fruits" value="media/apple.png" onclick="printImg()">사과
+    <br>
+    <img id="fruitimage" src="media/banana.gif" alt="" width="200px">
+  </form>
+</body>
+</html>

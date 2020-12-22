@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function init() {
+            var p = document.getElementById("p");
+//            p.addEventListener("mouseover", over);
+//            p.addEventListener("mouseout", out);
+            
+            p.onmouseover = function() {
+                this.style.backgroundColor = "pink";
+                this.style.border = "3px solid red";
+            }
+            p.onmouseout = function() {
+                this.style.backgroundColor = "yellow";
+            }
+        }
+//        function over() {
+//            p.style.backgroundColor = "red";
+//        }
+//        function out() {
+//            p.style.backgroundColor = "green";
+//        }
+    </script>
+</head>
+<body onload = "init()">
+    <p id="p">addEventListener(eventName, listener[, useCapture])로 만들거야</p>
+</body>
+</html>

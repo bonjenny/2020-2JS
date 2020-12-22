@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function over(obj) {
+            obj.style.backgroundColor='yellow';
+        }
+        function out(obj) {
+            obj.style.backgroundColor='orchid';
+        }
+        function over1() {
+            p.style.backgroundColor='yellow';
+        }
+        function out1() {
+            p.style.backgroundColor='orchid';
+        }
+        function init() {
+            var p = document.getElementById("p");
+            p.onmouseover = over1;
+            p.onmouseout = out1;
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h3>마우스를 올리면 배경색 변화</h3>
+    <p style="background-color: yellow" onmouseover="this.style.backgroundColor='orchid'" onmouseout="this.style.backgroundColor='yellow'">배경색 변화</p>
+    <p style="background-color: blue" onmouseover="over(this)" onmouseout="out(this)">배경색 변화2</p>
+    <p id="p">난 프로퍼티 방식</p>
+</body>
+</html>

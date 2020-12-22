@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>실습 3-2번 table을 이용한 for문으로 구성</title>
+</head>
+<body>
+    <h3>document.write를 이용하여 테이블 생성하기</h3>
+    <hr><br>
+    <script>
+        document.write("<table>");
+        document.write("<tr><th>n</th>");
+        for (var i=1; i<=9; i++) {
+            document.write("<td>");
+            document.write(i);
+            document.write("</td>");
+        }  
+        document.write("</tr>");
+        
+        document.write("<tr><th>n<sup>2</sup></th>");
+        for (i=1; i<=9; i++) {
+            document.write("<td>");
+            document.write(i*i);
+            document.write("</td>");
+        }
+        document.write("</tr>");
+        document.write("</table>");
+    </script>
+<!--
+    <table border = "1">
+        <tr>
+            <th>n</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <th>n<sup>2</sup></th>
+            <td>1</td>
+            <td>4</td>
+            <td>9</td>
+            <td>16</td>
+            <td>25</td>
+            <td>36</td>
+            <td>49</td>
+            <td>64</td>
+            <td>81</td>
+        </tr>
+    </table>
+-->
+</body>
+</html>

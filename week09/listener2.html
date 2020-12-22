@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var L = 0;
+        function over(obj) {
+            if(L == 0) {
+                obj.style.backgroundColor='yellow';
+                L = 1;
+            }
+            else {
+                obj.style.backgroundColor='orchid';
+                L = 0;
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h3>마우스를 올리면 배경색 변화</h3>
+    <p style="background-color: blue" onmouseover="over(this)">배경색 변화</p>
+    <p style="background-color: blue" onmouseover="over(this)">배경색 변화</p>
+    <p style="background-color: blue" onmouseover="over(this)">배경색 변화</p>
+    <p style="background-color: blue" onmouseover="over(this)">배경색 변화</p>
+    <p style="background-color: blue" onmouseover="over(this)">배경색 변화</p>
+    <p style="background-color: blue" onmouseover="over(this)">배경색 변화</p>
+    <p style="background-color: blue" onmouseover="over(this)">배경색 변화</p>
+    <p style="background-color: blue" onmouseover="over(this)">배경색 변화</p>
+    <p style="background-color: blue" onmouseover="over(this)">배경색 변화</p>
+    <p style="background-color: blue" onmouseover="over(this)">배경색 변화</p>
+    <p style="background-color: blue" onmouseover="over(this)">배경색 변화</p>
+</body>
+</html>
