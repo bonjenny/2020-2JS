@@ -1,0 +1,102 @@
+body {
+    font-family : '맑은 고딕', '돋움';
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    background-size: cover;
+}
+
+header h1 {
+    text-align: center;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    padding: 0.25em 0em 0.25em 0em;
+    margin: 1em 0em 0em 0em;
+    background-color: crimson;
+    color: white;
+}
+
+nav {
+  margin-bottom: 70px;
+}
+
+nav ul {
+    text-align: left;
+    list-style-type: none;
+}
+nav li {
+    letter-spacing: 10px;
+    display: inline;
+    margin-right: 20px;
+}
+nav li a {
+    color: blue;
+}
+nav li a:hover {
+    color: crimson;
+    padding: 2px;
+    border-top: 1px solid crimson;
+}
+
+a {
+    text-decoration: none;
+}
+
+aside {
+  margin: 20px;
+  margin-bottom: 60px;
+  padding: 15px;
+  background-color: #0a2a6a;
+  color: white;
+  float: left;
+}
+
+aside p {
+  display: inline-block;
+  float: left;
+  margin: 2px;
+}
+
+aside p:hover {
+  color: #ffc01c;
+  font-weight: bold;
+}
+
+img {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+table, tr, td {
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 0;
+}
+
+table {
+  display: inline-block;
+  margin: 30px;
+}
+
+#vmtable td:hover {
+  border: 1px solid red;
+}
+
+footer {
+  width: 100%;
+  height: 15%;
+  clear: both;
+  font-size: 10px;
+  margin-top: 100px;
+  background-color: #626262;
+  padding: 10px 30px 10px 30px;
+  color: white;
+}
+
+#end {
+  text-align: left;
+}

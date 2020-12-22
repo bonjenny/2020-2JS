@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>&#129313;Find the Differences</title>
+    <link rel="stylesheet" href="./css/medium.css">
+    <style>
+        @keyframes test {
+          25% { color: white; }
+          50% { color: #75c1e2; }
+          75% { color: white; }
+        }
+        h1 {
+          color: white;
+          animation: test 2s 4;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      function correct() {
+        alert("정답입니다!");
+      }
+
+      $(document).ready(function(){
+        $('#show').click(function(){
+          $('#cimg').css('border', '1px solid red');
+        });
+      });
+      $(document).ready(function(){
+        $('#hide').click(function(){
+          $('#cimg').css('border', 'none');
+        });
+      });
+
+      $(document).ready(function(){
+        $("#btn1").click(function() {
+            $("#cimg").animate({marginTop:"+=1"},"fast");
+            $("#cimg").animate({marginTop:"-=1"},"fast");
+        });
+      });
+      $(document).ready(function(){
+        $("#btn2").click(function() {
+            $("#cimg").animate({marginRight:"+=1"},"fast");
+            $("#cimg").animate({marginRight:"-=1"},"fast");
+        });
+      });
+      $(document).ready(function(){
+        $("#btn3").click(function() {
+            $("#cimg").animate({marginBottom:"+=1"},"fast");
+            $("#cimg").animate({marginBottom:"-=1"},"fast");
+        });
+      });
+      $(document).ready(function(){
+        $("#btn4").click(function() {
+            $("#cimg").animate({marginLeft:"+=1"},"fast");
+            $("#cimg").animate({marginLeft:"-=1"},"fast");
+        });
+      });
+
+      $(document).ready(function(){
+        $("#lshow").click(function(){
+          $("#mtable").hide(2000);
+        });
+        $("#lhide").click(function(){
+          $("#mtable").show(2000);
+        });
+      });
+      $(document).ready(function(){
+        $("#rshow").click(function(){
+          $("#vmtable").hide(2000);
+        });
+        $("#rhide").click(function(){
+          $("#vmtable").show(2000);
+        });
+      });
+
+      $(document).ready(function(){
+        $('aside p:odd').css({
+          backgroundColor: '#021a4b'
+        });
+      });
+    </script>
+</head>
+<body>
+    <header><h1>&#129313;Find the Differences</h1></header>
+    <nav>
+        <ul>
+            <li><a href="./main.html">HOME</a></li>
+            <li><a href="./easy.html">&#129353;초급</a></li>
+            <li><a href="./medium.html">&#129352;중급</a></li>
+            <li><a href="./hard.html">&#129351;고급</a></li>
+            <li><a href="./veryhard.html">&#127942;최고급</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <p>정답?
+        <input id="show" type="button" value="보기">
+        <input id="hide" type="button" value="닫기"></p><br>
+        <p>힌트1
+        <input id="btn1" type="button" value="HINT1"></p><br>
+        <p>힌트2
+        <input id="btn2" type="button" value="HINT2"></p><br>
+        <p>힌트3
+        <input id="btn3" type="button" value="HINT3"></p><br>
+        <p>힌트4
+        <input id="btn4" type="button" value="HINT4"></p><br>
+        <p>왼쪽?
+        <input id="lshow" type="button" value="닫기">
+        <input id="lhide" type="button" value="보기"></p><br>
+        <p>오른쪽?
+        <input id="rshow" type="button" value="닫기">
+        <input id="rhide" type="button" value="보기"></p>
+    </aside>
+    <section id="main">
+      <h3>왼쪽이 원본입니다! 오른쪽과 왼쪽 그림을 비교해 다른 부분을 클릭하세요!</h3>
+        <table id="mtable">
+          <tr>
+            <td><img src="./img/m1.jpg" alt="" width="100px" height="100px"></td>
+            <td><img src="./img/m2.jpg" alt="" width="100px" height="100px"></td>
+            <td><img src="./img/m3.jpg" alt="" width="100px" height="100px"></td>
+          </tr>
+          <tr>
+            <td><img src="./img/m4.jpg" alt="" width="100px" height="100px"></td>
+            <td><img src="./img/m5.jpg" alt="" width="100px" height="100px"></td>
+            <td><img src="./img/m6.jpg" alt="" width="100px" height="100px"></td>
+          </tr>
+          <tr>
+            <td><img src="./img/m7.jpg" alt="" width="100px" height="100px"></td>
+            <td><img src="./img/m8.jpg" alt="" width="100px" height="100px"></td>
+            <td><img src="./img/m9.jpg" alt="" width="100px" height="100px"></td>
+          </tr>
+        </table>
+        <table id="vmtable">
+          <tr>
+            <td><img src="./img/vm1.jpg" alt="" width="100px" height="100px"></td>
+            <td><img src="./img/vm2.jpg" alt="" width="100px" height="100px"></td>
+            <td><img src="./img/vm3.jpg" alt="" width="100px" height="100px"></td>
+          </tr>
+          <tr>
+            <td><img src="./img/vm4.jpg" alt="" width="100px" height="100px"></td>
+            <td><img id="cimg" src="./img/vm5.jpg" alt="" width="100px" height="100px" onclick="correct()"></td>
+            <td><img src="./img/vm6.jpg" alt="" width="100px" height="100px"></td>
+          </tr>
+          <tr>
+            <td><img src="./img/vm7.jpg" alt="" width="100px" height="100px"></td>
+            <td><img src="./img/vm8.jpg" alt="" width="100px" height="100px"></td>
+            <td><img src="./img/vm9.jpg" alt="" width="100px" height="100px"></td>
+          </tr>
+        </table>
+    <footer>
+        <p>
+            Copyright(C) 2020 UI
+            서울시 구로동 111-11번지 OO대학교 학생회관 214호 TEL: 222-2220
+            관리자: admin@ddd.ac.kr
+        </p>
+        <p id="end">
+            소감: 웹프로그래밍은 공부하면서 많이 힘들었지만 그만큼 또 재미있었던 과목이었습니다. 내가 작성한 코드 옆에 바로 결과가 나온다는 것도 신기했고 흥미로웠습니다. 가장 애정을 가지고 듣는 과목 중 하나였습니다.
+            1학기 인터넷기초실습과 2학기 웹프로그래밍이라는 과목을 배우며 처음엔 뭔지도 몰랐던 웹디자인에 관심이 생겼습니다. 방학동안 웹프로그래밍에 관심을 가지고 더 공부해보고 싶어졌습니다.
+            한 학기 동안 열심히 가르쳐주신 교수님께, 다음에 또 다른 과목으로 뵐 수 있으면 좋겠습니다. 감사합니다.
+        </p>
+    </footer>
+</body>
+</html>

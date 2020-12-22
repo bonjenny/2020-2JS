@@ -1,0 +1,67 @@
+body {
+    font-family : '맑은 고딕', '돋움';
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    background-size: cover;
+}
+
+header h1 {
+    text-align: center;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    padding: 0.25em 0em 0.25em 0em;
+    margin: 1em 0em 0em 0em;
+    background-color: crimson;
+    color: white;
+}
+
+nav ul {
+    text-align: left;
+    list-style-type: none;
+}
+nav li {
+    letter-spacing: 10px;
+    display: inline;
+    margin-right: 20px;
+}
+nav li a {
+    color: blue;
+}
+nav li a:hover {
+    color: crimson;
+    padding: 2px;
+    border-top: 1px solid crimson;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border-radius: 10px;
+    margin: 3em 0em 2em 0em;
+    border-style: double;
+    border-color: white;
+    border-width: 0.5em;
+}
+
+h3 {
+  background-color: #c8ad94;
+  padding: 30px;
+  font-size: 36px;
+}
+
+footer {
+  font-size: 10px;
+  margin-top: 100px;
+  background-color: #626262;
+  padding: 10px 30px 10px 30px;
+  color: white;
+  clear: both;
+}
+
+#end {
+  text-align: left;
+}
